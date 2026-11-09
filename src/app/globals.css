@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --foreground: #94A3B8;
+  --background: #f8faff;
+  --foreground: #0f172a;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -20,24 +20,29 @@ body {
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.45);
-  color: #FFFFFF;
+  background: rgba(37, 99, 235, 0.25);
+  color: #1e3a8a;
 }
 
-/* Custom Sleek Cobalt Blue Scrollbar */
+/* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 9999px;
-  border: 2px solid #050505;
+  border: 2px solid #f1f5f9;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #3b82f6;
+}
+
+/* Handwritten Font simulation */
+.font-handwritten {
+  font-family: "Caveat", "Architects Daughter", "Comic Sans MS", cursive, sans-serif;
 }
 
 /* Infinite Marquee Animation */
@@ -53,7 +58,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 32s linear infinite;
 }
 
 .animate-marquee:hover {
@@ -61,7 +66,7 @@ body {
 }
 
 /* Float Animations */
-@keyframes float {
+@keyframes floatSlow {
   0%, 100% {
     transform: translateY(0px);
   }
@@ -70,15 +75,28 @@ body {
   }
 }
 
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.8deg);
+  }
+}
+
 .animate-float {
-  animation: float 5s ease-in-out infinite;
+  animation: floatSlow 5s ease-in-out infinite;
 }
 
 .animate-float-delayed {
-  animation: float 6s ease-in-out 2s infinite;
+  animation: floatSlow 6s ease-in-out 2s infinite;
 }
 
-/* Gradient text shift */
+.animate-float-gentle {
+  animation: floatGentle 5.5s ease-in-out infinite;
+}
+
+/* Gradient Text Shimmer */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -93,17 +111,30 @@ body {
 
 .animate-gradient-text {
   background-size: 200% auto;
-  animation: gradientShift 4s ease infinite;
+  animation: gradientShift 5s ease infinite;
 }
 
-/* Frosted Glass Panels */
-.glass-panel {
-  background: rgba(10, 10, 12, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(37, 99, 235, 0.25);
+/* Glowing pulse */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
 }
 
-.glass-panel:hover {
-  border-color: rgba(59, 130, 246, 0.5);
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Subtle Card Hover Shadow */
+.card-hover-lift {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(37, 99, 235, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }

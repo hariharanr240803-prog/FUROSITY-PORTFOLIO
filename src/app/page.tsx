@@ -7,40 +7,36 @@ import PortfolioSection from "@/components/PortfolioSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import CtaFooterSection from "@/components/CtaFooterSection";
-import FiberBackground from "@/components/FiberBackground";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col font-sans text-[#94A3B8] selection:bg-blue-600/40 selection:text-white bg-[#050505]">
-      {/* 1. Smoky Fluid Aurora Particle Background */}
-      <FiberBackground />
-
-      {/* 2. Header / Floating Glass Navbar */}
+    <div className="relative min-h-screen flex flex-col font-sans bg-[#F8FAFF] text-slate-900 selection:bg-blue-600/30 selection:text-blue-900">
+      {/* 1. Header / Floating Glass Navbar */}
       <Navbar />
 
-      <main className="flex-1 relative z-10">
-        {/* Hero Section */}
+      <main className="flex-1 relative">
+        {/* 2. Hero Section: Clean daylight copy + Futuristic 3D Room */}
         <Hero />
 
-        {/* Tech Partners Trust Strip */}
+        {/* 3. Tech Partners Trust Strip */}
         <PartnersBar />
 
-        {/* Services Grid - What We Do */}
+        {/* 4. Services Grid: What We Do (From Ideas to Powerful Solutions) */}
         <ServicesSection />
 
-        {/* Process Roadmap - A Simple Path from Idea to Impact */}
+        {/* 5. Process Roadmap: A Simple Path from Idea to Impact (Dark Cosmic Ocean Wave) */}
         <ProcessSection />
 
-        {/* Portfolio Showcase - Projects that Create Real Value */}
+        {/* 6. Portfolio Showcase: Projects that Create Real Value */}
         <PortfolioSection />
 
-        {/* Feature Highlights - More Than Development, A True Partner */}
+        {/* 7. Feature Highlights: More Than Development, A True Partner */}
         <FeaturesSection />
 
-        {/* Testimonials - What Clients Say */}
+        {/* 8. Testimonials: What Clients Say (Robot holding Star + Review Card) */}
         <TestimonialSection />
 
-        {/* High-Impact CTA Banner & 5-Column Cosmic Footer */}
+        {/* 9. Sunset Mountain Horizon CTA & 5-Column Cosmic Night Footer */}
         <CtaFooterSection />
       </main>
     </div>
